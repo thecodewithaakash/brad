@@ -16,7 +16,7 @@ const Navbar = ({ session }: any) => {
                     {
                         session ? (
                             <>
-                                <Link to="/account" className="mr-5">Account</Link>,
+                                <Link to="/account" className="mr-5">Account</Link>
                                 <SignOut />
 
 
