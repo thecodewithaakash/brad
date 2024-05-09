@@ -49,9 +49,6 @@ function Login({ logOut, session }: any) {
     const [socialLayout, setSocialLayout] = useState<SocialLayout>(socialAlignments[1] satisfies SocialLayout)
     const [view, setView] = useState(views[0]);
 
-    setTheme('dark')
-
-
     if (!session) {
         return (
             <>
@@ -239,7 +236,7 @@ function Login({ logOut, session }: any) {
         return (
             <>
 
-                <Home logOut={logOut} session={session} />,
+                <Home logOut={logOut} session={session} setTheme={setTheme} />,
             </>
         )
     }
