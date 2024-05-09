@@ -1,8 +1,7 @@
 
 import { Link } from 'react-router-dom';
-import SignOut from './SignOut';
 
-const Navbar = ({ session }: any) => {
+const Navbar = ({ logOut, session }: any) => {
     return (
         <header className=" body-font">
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -16,11 +15,16 @@ const Navbar = ({ session }: any) => {
                     {
                         session ? (
                             <>
-                                <Link to="/account" className="mr-5">Account</Link>
-                                <SignOut />
+                                <a href="/account" className="mr-5">Account</a>
+                                <button onClick={logOut} className="text-black inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 ">signOut
+                                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
 
 
                             </>
+
                         ) : (
                             <>
 

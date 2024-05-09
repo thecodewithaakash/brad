@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import { useEffect, useState } from "react"
 import { createClient } from '@supabase/supabase-js'
-import SignOut from "./components/SignOut"
+
 
 const supabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
@@ -47,7 +47,6 @@ const App = () => {
         <Route path="/" element={<Login logOut={logOut} session={session} />} />
         <Route path="/account" element={<Account session={session} />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/signout" element={<SignOut logOut={logOut} />} />
       </Routes>
     </>
   )
