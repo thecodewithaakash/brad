@@ -13,9 +13,11 @@ const Navbar = ({ logOut, session }: any) => {
                 </Link>
                 <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-end">
                     {
+                        session ? (<Link to="/account" className="mr-5">Account</Link>) : ""
+                    }
+                    {
                         session ? (
                             <>
-                                <a href="/account" className="mr-5">Account</a>
                                 <button onClick={logOut} className="text-black inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base  md:mt-0 ">signOut</button>
 
 
