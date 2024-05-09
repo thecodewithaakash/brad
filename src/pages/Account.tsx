@@ -1,10 +1,7 @@
-import { useState } from "react";
+
 
 
 const Account = ({ session }: any) => {
-
-    // const user = session;
-    // console.log(user.user.email);
 
 
     return (

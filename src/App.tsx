@@ -17,9 +17,8 @@ const App = () => {
   const [session, setSession] = useState<any>(null)
 
 
-
   const logOut = async () => {
-    const { error } = await supabase.auth.signOut();
+    await supabase.auth.signOut();
 
   }
 

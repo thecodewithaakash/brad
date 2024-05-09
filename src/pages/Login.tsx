@@ -2,7 +2,7 @@ import styles from '../App.module.css'
 import { createClient } from '@supabase/supabase-js'
 import { SocialLayout, ThemeSupa, ViewType } from '@supabase/auth-ui-shared'
 import { Auth } from '@supabase/auth-ui-react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import ToggleButton from '../ToggleButton'
 import MenuIcon from '../MenuIcon'
 
@@ -48,6 +48,8 @@ function Login({ logOut, session }: any) {
     const [theme, setTheme] = useState('dark')
     const [socialLayout, setSocialLayout] = useState<SocialLayout>(socialAlignments[1] satisfies SocialLayout)
     const [view, setView] = useState(views[0]);
+
+    setTheme('dark')
 
 
     if (!session) {
