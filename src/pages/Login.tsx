@@ -10,9 +10,8 @@ import Home from '../components/Home'
 
 
 const getURL = () => {
-    let url = location.href;
-    url = import.meta.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:5173/'
-    url = url.includes('http') ? url : `https://brad-krahe.vercel.app/`;
+    let url = import.meta.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:5173/'
+    url = url.includes('http') ? url : import.meta.env.NEXT_PUBLIC_SITE_URL;
     url = url.charAt(url.length - 1) === '/' ? url : `${url}/`;
     return url;
 };
