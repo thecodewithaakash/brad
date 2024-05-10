@@ -44,7 +44,7 @@ const App = () => {
       <Navbar logOut={logOut} session={session} />,
       <Routes>
         <Route path="/" element={<Login logOut={logOut} session={session} />} />
-        <Route path="/account" element={<Account session={session} />} />
+        <Route path="/account" element={<Account logOut={logOut} session={session} />} />
         <Route path="/home" element={<Home />} />
       </Routes>
     </>
