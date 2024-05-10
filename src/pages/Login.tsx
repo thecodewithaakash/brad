@@ -11,13 +11,14 @@ import Home from '../components/Home'
 
 const getURL = () => {
     let url =
-        import.meta?.env?.NEXT_PUBLIC_SITE_URL ?? // Set this to your site URL in production env.
-        import.meta?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Automatically set by Vercel.
-        'http://localhost:5173/'
+        import.meta.env.NEXT_PUBLIC_VERCEL_URL;
+    // import.meta?.env?.NEXT_PUBLIC_SITE_URL ?? // Set this to your site URL in production env.
+    // import.meta?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Automatically set by Vercel.
+    // 'http://localhost:5173/'
     // Make sure to include `https://` when not localhost.
-    url = url.includes('http') ? url : `https://${url}`
+    // url = url.includes('http') ? url : `https://${url}`
     // Make sure to include a trailing `/`.
-    url = url.charAt(url.length - 1) === '/' ? url : `${url}/`
+    // url = url.charAt(url.length - 1) === '/' ? url : `${url}/`
     return url
 }
 
