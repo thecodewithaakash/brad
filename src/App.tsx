@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useNavigate } from "react-router-dom"
 import Login from "./pages/Login"
 import Account from "./pages/Account"
 import Navbar from "./components/Navbar"
@@ -14,13 +14,12 @@ const supabase = createClient(
 
 
 const App = () => {
-
   const [session, setSession] = useState<any>(null)
-
+  let navigate = useNavigate();
 
   const logOut = async () => {
     await supabase.auth.signOut();
-
+    navigate('/')
   }
 
 
