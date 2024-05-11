@@ -5,6 +5,9 @@ import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import { useEffect, useState } from "react"
 import { createClient } from '@supabase/supabase-js'
+import NameForm from "./components/NameForm"
+import EmailForm from "./components/EmailForm"
+
 
 
 
@@ -47,6 +50,8 @@ const App = () => {
         <Route path="/" element={<Login logOut={logOut} session={session} />} />
         <Route path="/account" element={<Account logOut={logOut} session={session} />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/name" element={<NameForm />} />
+        <Route path="/email" element={<EmailForm />} />
       </Routes>
     </>
   )
