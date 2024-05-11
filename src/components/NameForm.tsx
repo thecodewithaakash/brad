@@ -53,19 +53,19 @@ const NameForm = ({ userName, session }: any) => {
 
     if (session) {
         return (
-            <div className=' w-full max-w-3xl m-auto my-8 border rounded-md p border-zinc-700'>
+            <div className='w-full max-w-3xl m-auto my-8 border rounded-md border-zinc-700 flex items-center justify-center'>
                 <div className="mt-4 mb-4 text-xl font-semibold px-5 py-4">
                     <h1 className="p-4 text-white">Update Your Name</h1>
                     <form id="nameForm" onSubmit={(e) => handleSubmit(e)}>
                         <input
                             type="text"
                             name="fullName"
-                            className="w-1/2 p-3 rounded-md "
+                            className=" p-3 rounded-md "
                             defaultValue={userName}
                             placeholder="Your name"
                             maxLength={64}
                         />
-                        <button className='text-white bg-indigo-500 border-0 py-2 px-8 ml-4 focus:outline-none hover:bg-indigo-600 rounded text-lg'>Update Name</button>
+                        <button className='text-white bg-indigo-500 border-0 py-2 px-8 ml-4 mt-2 focus:outline-none hover:bg-indigo-600 rounded text-lg'>Update Name</button>
                     </form>
                 </div>
 
